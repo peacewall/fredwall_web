@@ -1,0 +1,73 @@
+[
+  {
+    "title": "PainSensor (MedStorm)",
+    "one_liner": "Conductivity-based pain sensing device (MDR/CE context).",
+    "description": "Designed the PainSensor electronics and handled multi-tool CAD workflows across Target3001, KiCad, and Eagle due to legacy constraints.",
+    "highlights": [
+      "PCB design + iteration under medical-device constraints",
+      "Documentation + design continuity across CAD tools"
+    ],
+    "links": []
+  },
+  {
+    "title": "Smartwatch (embedded systems learning project)",
+    "one_liner": "Embedded smartwatch project to grow full-stack embedded skills.",
+    "description": "Early-stage smartwatch focusing on embedded system integration beyond hardware (health/activity/connectivity goals).",
+    "highlights": [
+      "System-level embedded learning (HW + SW)",
+      "Board design and bring-up workflow"
+    ],
+    "links": []
+  },
+  {
+    "title": "Bachelor Project: Autonomous energy-harvesting trimaran",
+    "one_liner": "Self-sustaining trimaran for long-term ocean monitoring.",
+    "description": "Worked on energy harvesting electronics, wave energy conversion system, and 3D modeling as part of a multidisciplinary team project.",
+    "highlights": [
+      "Energy harvesting electronics design",
+      "Wave energy conversion concept + implementation",
+      "3D modeling contributions"
+    ],
+    "links": []
+  },
+  {
+    "title": "Vulkaza Internship: Parametric 3D model API",
+    "one_liner": "Python API to customize Blender models from a web interface.",
+    "description": "Built an API that updates Blender model parameters (dimensions/text), then exports STL for slicing and manufacturing.",
+    "highlights": [
+      "Python + Blender automation",
+      "Parametric pipeline from UI inputs to STL"
+    ],
+    "links": []
+  },
+  {
+    "title": "Biomedical pneumatic sensory board (research project)",
+    "one_liner": "Device for balance studies measuring oxygen levels in the foot.",
+    "description": "Developed a pneumatic device and prototype electronics to study balance/heel sensory contribution in collaboration with a student team and an industry partner.",
+    "highlights": [
+      "Prototyping + measurement concept development",
+      "Hardware integration for experimental setup"
+    ],
+    "links": []
+  },
+  {
+    "title": "Guitars (3 builds from scratch)",
+    "one_liner": "End-to-end mechanical + electrical instrument builds.",
+    "description": "Built three electric guitars from scratch, experimenting with circuitry and pickup designs with manual integration of all components.",
+    "highlights": [
+      "Hands-on build + wiring",
+      "Circuit experimentation"
+    ],
+    "links": []
+  },
+  {
+    "title": "EMG + PPG circuits",
+    "one_liner": "Signal acquisition + filtering for biosignals; EMG-controlled robotic arm.",
+    "description": "Designed EMG and PPG measurement circuits focusing on acquisition, filtering, and noise reduction; EMG used to control a robotic arm.",
+    "highlights": [
+      "Analog front-end design",
+      "Filtering and noise reduction"
+    ],
+    "links": []
+  }
+]

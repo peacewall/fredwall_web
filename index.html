@@ -1,46 +1,52 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fredwall – CV</title>
-    <meta name="description" content="Portfolio and CV site." />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-  </head>
-  <body>
-    <header class="container">
-      <h1>Fredwall</h1>
-      <p class="muted">Embedded Systems • Electronics • Software</p>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/pages/projects.html">Projects</a>
-        <a href="/pages/cv.html">CV</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fredwall</title>
+
+  <link rel="stylesheet" href="/assets/css/home.css" />
+</head>
+
+<body>
+  <!-- NAV -->
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Primary">
+      <div class="nav__links">
+        <a class="active" href="/">Home</a>
+        <a href="/pages/work-education.html">Work &amp; Education</a>
+        <a class="active" href="/pages/projects.html">Projects</a>
+        <a href="/pages/volleyball.html">Volleyball</a>
+        <a href="/pages/content.html">Content</a>
         <a href="/pages/contact.html">Contact</a>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
 
-    <main class="container">
-      <section class="card">
-        <h2>About</h2>
-        <p>
-          Short intro: who you are, what you build, what roles you want.
-        </p>
-      </section>
+  <!-- HOME -->
+  <main class="home">
+    <!-- Fullscreen background video -->
+    <video class="home__bg" autoplay muted loop playsinline aria-hidden="true">
+      <source src="/assets/video/bg.mp4" type="video/mp4" />
+    </video>
+    <div class="home__overlay" aria-hidden="true"></div>
 
-      <section class="card">
-        <h2>Highlights</h2>
-        <ul>
-          <li>Zephyr drivers (SMBus / BQ25750)</li>
-          <li>Hardware + software integration</li>
-          <li>PCB + firmware + web UI</li>
-        </ul>
-      </section>
-    </main>
+    <!-- Center content -->
+    <section class="home__center">
+      <div class="home__portraitWrap">
+        <!-- Use the profile image you want here -->
+        <img class="home__portrait" src="/assets/img/profile/art-profile.png" alt="Håvard Fredwall">
+      </div>
 
-    <footer class="container muted">
-      <p>© <span id="year"></span> Fredwall</p>
-    </footer>
+      <h1 class="home__title">Fredwall</h1>
 
-    <script src="assets/js/main.js"></script>
-  </body>
-</html>
+      <p class="home__subtitle">
+        Electrical &amp; Embedded Software Engineer · Professional Beach Volleyball Player · Content Creator
+      </p>
+
+      <div class="home__links" aria-label="Social links">
+        <a class="home__iconLink" href="https://www.instagram.com/sunsetspikes/" target="_blank" rel="noreferrer" aria-label="Instagram (SunsetSpikes)">
+          <img src="/assets/img/icons/instagram.png" alt="">
+        </a>
+
+        <a class="home__iconLink" href="https://www.linkedin.com/in/h%C3%A5var

@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work & Education · Fredwall</title>
+
+  <!-- Keep your existing nav styling -->
+  <link rel="stylesheet" href="/assets/css/home.css" />
+  <!-- New dashboard layout -->
+  <link rel="stylesheet" href="/assets/css/work-dashboard.css" />
+</head>
+
+<body>
+  <!-- Top nav (same idea as your site) -->
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Primary">
+      <button class="nav__burger" id="burger" aria-label="Toggle sidebar" aria-expanded="false">☰</button>
+
+      <div class="nav__links">
+        <a href="/">Home</a>
+        <a href="/pages/work-education.html">Work &amp; Education</a>
+        <a href="/pages/projects.html">Projects</a>
+        <a href="/pages/volleyball.html">Volleyball</a>
+        <a href="/pages/content.html">Content</a>
+        <a href="/pages/contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar" id="sidebar" aria-label="Sidebar">
+      <div class="sidebar__top">
+        <div class="sidebar__avatarWrap">
+          <img class="sidebar__avatar" src="/assets/img/profile/profile.png" alt="Profile photo">
+          <span class="sidebar__statusDot" aria-hidden="true"></span>
+        </div>
+
+        <div class="sidebar__name">Håvard Fredwall</div>
+        <div class="sidebar__tag">Electrical &amp; Embedded Software Engineer</div>
+      </div>
+
+      <div class="sidebar__section">
+        <div class="sidebar__kv">
+          <div class="kv__row"><span>Residence:</span><span class="kv__val">Norway</span></div>
+          <div class="kv__row"><span>City:</span><span class="kv__val">Oslo</span></div>
+          <div class="kv__row"><span>Age:</span><span class="kv__val">24</span></div>
+        </div>
+      </div>
+
+      <div class="sidebar__section">
+        <div class="sidebar__sectionTitle">Languages</div>
+
+        <div class="rings">
+          <div class="ring" data-pct="100">
+            <svg viewBox="0 0 36 36" class="ring__svg" aria-hidden="true">
+              <path class="ring__bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <path class="ring__fg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+            </svg>
+            <div class="ring__pct">100%</div>
+            <div class="ring__label">Norwegian</div>
+          </div>
+
+          <div class="ring" data-pct="95">
+            <svg viewBox="0 0 36 36" class="ring__svg" aria-hidden="true">
+              <path class="ring__bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <path class="ring__fg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+            </svg>
+            <div class="ring__pct">95%</div>
+            <div class="ring__label">English</div>
+          </div>
+
+          <div class="ring" data-pct="40">
+            <svg viewBox="0 0 36 36" class="ring__svg" aria-hidden="true">
+              <path class="ring__bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <path class="ring__fg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+            </svg>
+            <div class="ring__pct">40%</div>
+            <div class="ring__label">German</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar__section">
+        <div class="sidebar__sectionTitle">Core Skills</div>
+
+        <div class="bars">
+          
+
+          <div class="bar">
+            <div class="bar__row"><span>Electrical Design / PCB</span><span>90%</span></div>
+            <div class="bar__track"><div class="bar__fill" style="width:90%"></div></div>
+          </div>
+
+          <div class="bar">
+            <div class="bar__row"><span>3D Modeling</span><span>90%</span></div>
+            <div class="bar__track"><div class="bar__fill" style="width:90%"></div></div>
+          </div>
+
+          <div class="bar">
+            <div class="bar__row"><span>Embedded C (Zephyr)</span><span>70%</span></div>
+            <div class="bar__track"><div class="bar__fill" style="width:70%"></div></div>
+          </div>
+
+          <div class="bar">
+            <div class="bar__row"><span>Grafical design)</span><span>75%</span></div>
+            <div class="bar__track"><div class="bar__fill" style="width:75%"></div></div>
+          </div>
+      </div>
+
+      <div class="sidebar__section">
+        <div class="sidebar__sectionTitle">Toolbox</div>
+        <ul class="checks">
+  
+          <li>Altium · KiCad · Eagle · Target3001</li>
+          <li>Fusion 360 · Blender · Rapid prototyping</li>
+          <li>Embedded C · C · Pyton · HTML · CSS ·Javascript · Verilog · VHDL </li>
+          <li>3D printing: Prusa · Bambu · Creality · Cura</li>
+          <li>Zephyr · Free RTOS · STM32</li>
+          <li>Linux · Git · GitHub </li>
+        </ul>
+      </div>
+
+      <div class="sidebar__section sidebar__cta">
+        <a class="btn btn--wide" href="/assets/docs/CV_Havard_Fredwall.pdf" target="_blank" rel="noreferrer">
+          Download CV
+        </a>
+      </div>
+
+      <div class="sidebar__bottom">
+        <a class="iconbtn" href="https://www.linkedin.com/in/h%C3%A5vard-fredwall-548137234/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          in
+        </a>
+        <a class="iconbtn" href="https://www.instagram.com/sunsetspikes/" target="_blank" rel="noreferrer" aria-label="Instagram">
+          ig
+        </a>
+        <a class="iconbtn" href="https://github.com/peacewall" target="_blank" rel="noreferrer" aria-label="GitHub">
+          gh
+        </a>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+      <!-- HERO BANNER -->
+      <section class="hero">
+        <video class="hero__bg" autoplay muted loop playsinline aria-hidden="true">
+          <source src="/assets/video/bg.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__overlay" aria-hidden="true"></div>
+
+        <div class="hero__content">
+          <h1 class="hero__title">Work &amp; Education</h1>
+          <p class="hero__sub">
+            <code>I build embedded systems end-to-end: electronics, firmware, system and 3D modeling, UI, and product design.</code>
+          </p>
+
+        
+        </div>
+
+        <div class="hero__image" aria-hidden="true">
+          <!-- optional: show your profile image inside hero like screenshot -->
+          <img src="/assets/img/profile/speaker-profile.png" alt="">
+        </div>
+      </section>
+
+      <!-- STATS ROW -->
+      <section class="stats">
+        <div class="stat">
+          <div class="stat__num">Electrical desing</div>
+          <div class="stat__label">PCB and Schematic design</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">3D</div>
+          <div class="stat__label">Modeling &amp; CAD</div>
+        </div>
+         <div class="stat">
+          <div class="stat__num">Embedded Programming</div>
+          <div class="stat__label">Zephyr · STM32</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">UI</div>
+          <div class="stat__label">Web Interface</div>
+        </div>
+      </section>
+
+      <!-- WORK EXPERIENCE (cards like screenshot services) -->
+      <section class="section" id="work">
+        <div class="section__title">Work Experience</div>
+
+        <div class="cards">
+          <!-- Voltina -->
+          <article class="card reveal">
+            <div class="card__top">
+              <img class="card__logo" src="/assets/img/work/voltina.png" alt="Voltina logo">
+              <div>
+                <div class="card__heading">Voltina</div>
+                <div class="card__meta">Electrical &amp; Embedded Software Engineer · Current</div>
+              </div>
+            </div>
+            <p class="sidebar__tag">
+              March 2025 -> Current
+            </p>
+            <p class="card__text">
+              Head of embedded development in zephyr, 3D modeling and grafical design. Embedded C, integrated with a web UI (HTML/CSS/JS) We are building a Field Programmable Hub for the Military.
+            </p>
+            <a class="card__link" href="#work">Read more →</a>
+          </article>
+
+          <!-- MedStorm -->
+          <article class="card reveal">
+            <div class="card__top">
+              <img class="card__logo" src="/assets/img/work/medstorm.png" alt="MedStorm logo">
+              <div>
+                <div class="card__heading">MedStorm</div>
+                <div class="card__meta">Hardware Developer</div>
+              </div>
+            </div>
+            <p class="sidebar__tag">
+              March, 2022 -> March, 2024 
+            </p>
+            <p class="card__text">
+              Tasks: developing and maintaining electronic Painsensors. Tasks include
+              technical documentation, graphic design (Inkscape/adobe), 3D modeling,
+              prototyping, documentation and electronic development using KiCad, Target3001, and Eagle
+            </p>
+            <a class="card__link" href="#work">Read more →</a>
+          </article>
+
+          <!-- Orbit -->
+          <article class="card reveal">
+            <div class="card__top">
+              <img class="card__logo" src="/assets/img/work/orbit.png" alt="Orbit logo">
+              <div>
+                <div class="card__heading">Orbit (NTNU)</div>
+                <div class="card__meta">Hardware Engineer &amp Currently Mentor</div>
+              </div>
+            </div>
+            <p class="sidebar__tag">
+              August 2024 -> Current
+            </p>
+            <p class="card__text">
+              Designing the onboard computer and high-speed FPGA system for BioSAT, a cube satelite taking a plant to space.(Altium, PCB and schematic design)
+            <a class="card__link" href="#work">Read more →</a>
+          </article>
+
+          <!-- KRIK -->
+          <article class="card reveal">
+            <div class="card__top">
+              <img class="card__logo" src="/assets/img/work/krik.png" alt="KRIK logo">
+              <div>
+                <div class="card__heading">KRIK</div>
+                <div class="card__meta">Event Organizer</div>
+              </div>
+            </div>
+            <p class="sidebar__tag">
+              Jan 2023 -> Current
+            </p>
+            <p class="card__text">
+              Planning and coordinating large camps for 700+ participants annually in a cross-functional team.
+            </p>
+            <a class="card__link" href="#work">Read more →</a>
+          </article>
+
+          <!-- Vulkaza -->
+          <article class="card reveal">
+            <div class="card__top">
+              <img class="card__logo" src="/assets/img/work/vulkaza.png" alt="Vulkaza logo">
+              <div>
+                <div class="card__heading">Vulkaza</div>
+                <div class="card__meta">Internship</div>
+              </div>
+            </div>
+            <p class="sidebar__tag">
+              June 2022 -> August 2022
+            </p>
+            <p class="card__text">
+              Tasks: software developer and wrote an API customizing 3D models in Python and Blender. I also learned how to 3D model in Fusion 360
+            </p>
+            <a class="card__link" href="#work">Read more →</a>
+          </article>
+
+          <!-- Biomedical -->
+          <article class="card reveal">
+            <div class="card__top">
+              <img class="card__logo" src="/assets/img/work/biomed.png" alt="Biomedical project">
+              <div>
+                <div class="card__heading"></div>
+                <div class="card__meta">Biomedical Research Project</div>
+              </div>
+            </div>
+            <p class="sidebar__tag">
+              September 2022 -> June 2023
+            </p>
+            <p class="card__text">
+              Concept + prototype for measurement system; breadboarding, iteration, and embedded C implementation.
+            </p>
+            <a class="card__link" href="#work">Read more →</a>
+          </article>
+
+          <!-- KG -->
+          <article class="card reveal">
+            <div class="card__top">
+              <img class="card__logo" src="/assets/img/work/kg.png" alt="Kristelig Gymnasium logo">
+              <div>
+                <div class="card__heading">Kristelig Gymnasium</div>
+                <div class="card__meta">Substitute Teacher · Sep 2021 – Jun 2024</div>
+              </div>
+            </div>
+            <p class="card__text">
+              Teaching Math, Python, Physics, Biology, and Science—structured communication of technical topics.
+            </p>
+            <a class="card__link" href="#work">Read more →</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section class="section">
+        <div class="section__title">Education</div>
+
+        <div class="cards cards--edu">
+          <article class="card reveal">
+            <div class="card__heading">NTNU</div>
+            <div class="card__meta">MS Electrical Engineering (Embedded Systems)</div>
+            <p class="sidebar__tag">
+              August 2024 -> Current
+            </p>
+            <div class="card__text">At NTNU i went out with a B grade average, while prioritizing work, voluntary position in Orbit and KIRK, and professional Beach volleyball</div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__heading">OsloMet</div>
+            <div class="card__meta">BA Electrical Engineering </div>
+            <p class="sidebar__tag">
+              Aug 2021 –> Jun 2024
+            </p>
+            <div class="card__text">At OsloMet i finished with A grade average, also while working three jobs and pursuing volleyball professionally</div>
+
+          </article>
+
+          <article class="card reveal">
+            <div class="card__heading">Hedmarktoppen Folkehøyskole</div>
+             <p class="sidebar__tag">
+              Aug 2020 –> Jun 2021
+            </p>
+          
+          
+          </article>
+
+          <article class="card reveal">
+            <div class="card__heading">Kristelig Gymnasium</div>
+            <p class="sidebar__tag">
+              Aug 2017 –> Jun 2020
+            </p>
+            
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/assets/js/work-dashboard.js"></script>
+</body>
+</html>

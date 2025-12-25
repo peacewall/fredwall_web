@@ -1,16 +1,318 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects</title>
-    <link rel="stylesheet" href="../assets/css/styles.css" />
-  </head>
-  <body>
-    <main class="container">
-      <h1>Projects</h1>
-      <p class="muted">Selected engineering work.</p>
-      <p><a href="/">← Back</a></p>
-    </main>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects · Fredwall</title>
+
+  <!-- your global styles (nav, base typography, etc.) -->
+  <link rel="stylesheet" href="/assets/css/home.css" />
+  <!-- this page -->
+  <link rel="stylesheet" href="/assets/css/projects.css" />
+</head>
+
+<body class="projects">
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Primary">
+      <div class="nav__links">
+        <a href="/">Home</a>
+        <a href="/pages/work-education.html">Work &amp; Education</a>
+        <a class="active" href="/pages/projects.html">Projects</a>
+        <a href="/pages/volleyball.html">Volleyball</a>
+        <a href="/pages/content.html">Content</a>
+        <a href="/pages/contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Fullscreen video background -->
+  <video class="projects__bg" autoplay muted loop playsinline preload="metadata">
+    <!-- IMPORTANT: adjust path if your bg.mp4 lives somewhere else -->
+    <source src="/assets/video/bg.mp4" type="video/mp4" />
+  </video>
+  <div class="projects__overlay" aria-hidden="true"></div>
+
+  <main class="projects__main">
+    <section class="projects__header reveal">
+      <h1 class="projects__title">Projects</h1>
+      <p class="projects__lead">
+        It turns out that I have created quite a few things over the past few years. These are all my children, not all of them perfect, but they have taught me a lot. My education is important, but this is where my real knowledge lies, and where I gained the confidence to turn any idea into reality.
+      </p>
+
+      <div class="projects__filters" role="tablist" aria-label="Project filters">
+        <button class="chip is-active" type="button" data-filter="all">All</button>
+        <button class="chip" type="button" data-filter="hardware">Hardware</button>
+        <button class="chip" type="button" data-filter="software">Code</button>
+        <button class="chip" type="button" data-filter="mech">Mech/3D</button>
+        <button class="chip" type="button" data-filter="biomed">Biomedical</button>
+        <button class="chip" type="button" data-filter="military">Military</button>
+      </div>
+    </section>
+
+    <section class="projects__grid" aria-label="Project grid">
+      <!-- NOTE: put images in /assets/img/projects/… or keep as-is (fallback gradient will show). -->
+      <article class="pr-card reveal" data-tags="mech military"
+        data-title="System development and 3D modeling of the FPH462 at Voltina"
+        data-subtitle="System model"
+        data-body="3D model of the complete system and assembly for the Field Power Hub 462 (FPH). The enclosure was designed in Fusion 360 and manufactured in aluminium. The design is built to resist wear and tear and to meet relevant military standards for durability and robustness."
+        data-img="/assets/img/projects/winter_box.png">
+        <div class="pr-card__img" style="--img:url('/assets/img/projects/winter_box.png')"></div>
+        <div class="pr-card__shade" aria-hidden="true"></div>
+        <div class="pr-card__content">
+          <div class="pr-card__kicker">Voltina</div>
+          <h3 class="pr-card__h">System Model</h3>
+          <p class="pr-card__p">3D system model of the Field Power Hub 462 developed for the military.</p>
+          <div class="pr-card__tags">
+            <span class="tag">Mech/3D</span><span class="tag">Military</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pr-card reveal" data-tags="mech military"
+        data-title="ARC142 system 3D model"
+        data-subtitle="3D model"
+        data-body="3D model of the complete system for the Adaptable Reprogrammable Cable 142. The design includes a shielded housing with protective strain relief."
+        data-img="/assets/img/projects/smartcable.png">
+        <div class="pr-card__img" style="--img:url('/assets/img/projects/smartcable.png')"></div>
+        <div class="pr-card__shade" aria-hidden="true"></div>
+        <div class="pr-card__content">
+          <div class="pr-card__kicker">Voltina</div>
+          <h3 class="pr-card__h">System Model</h3>
+          <p class="pr-card__p">3D model of the Adaptable Reprogrammable Cable developed for the military.</p>
+          <div class="pr-card__tags">
+            <span class="tag">Mech/3D</span><span class="tag">Military</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pr-card reveal" data-tags="mech military"
+        data-title="ARC142 PCB design"
+        data-subtitle="PCB design"
+        data-body="PCB design for the Adaptable Reprogrammable Cable 142. The design is optimized for minimum size while still delivering strong performance. Built around a BGA STM32 MCU and microvias."
+        data-img="/assets/img/projects/smartcable_pcb.png">
+        <div class="pr-card__img" style="--img:url('/assets/img/projects/smartcable_pcb.png')"></div>
+        <div class="pr-card__shade" aria-hidden="true"></div>
+        <div class="pr-card__content">
+          <div class="pr-card__kicker">Voltina</div>
+          <h3 class="pr-card__h">Circuit Design</h3>
+          <p class="pr-card__p">PCB design for the Adaptable Reprogrammable Cable developed for the military.</p>
+          <div class="pr-card__tags">
+            <span class="tag">Hardware</span><span class="tag">Military</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pr-card reveal" data-tags="mech military"
+        data-title="ARC142 firmware in embedded C"
+        data-subtitle="Firmware development"
+        data-body="Firmware development for the Adaptable Reprogrammable Cable 142. This includes programming both the receiving unit (FPH462) and the ARC142 itself. The ARC142 communicates over UART and RS485 and can be reprogrammed via a serial link."
+        data-img="/assets/img/projects/smartcable_code.png">
+        <div class="pr-card__img" style="--img:url('/assets/img/projects/smartcable_code.png')"></div>
+        <div class="pr-card__shade" aria-hidden="true"></div>
+        <div class="pr-card__content">
+          <div class="pr-card__kicker">Voltina</div>
+          <h3 class="pr-card__h">Firmware Development</h3>
+          <p class="pr-card__p">Firmware development for the Adaptable Reprogrammable Cable developed for the military.</p>
+          <div class="pr-card__tags">
+            <span class="tag">Code</span><span class="tag">Military</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pr-card reveal" data-tags="hardware biomed"
+        data-title="PainSensor (MedStorm)"
+        data-subtitle="Conductivity & awareness/pain indices"
+        data-body="At MedStorm, I designed four devices. Two of them reached the market before I changed jobs. I designed two PainSensors, a test device, and a connectivity box currently used in hospitals. I designed the PCBs and the casings for all of the products."
+        data-img="/assets/img/projects/painsensor.png">
+        <div class="pr-card__img" style="--img:url('/assets/img/projects/painsensor.png')"></div>
+        <div class="pr-card__shade" aria-hidden="true"></div>
+        <div class="pr-card__content">
+          <div class="pr-card__kicker"> MedStorm</div>
+          <h3 class="pr-card__h">PainSensor (MedStorm)</h3>
+          <p class="pr-card__p">Design work for the PainSensor at MedStorm.</p>
+          <div class="pr-card__tags">
+            <span class="tag">Hardware</span><span class="tag">Biomedical</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pr-card reveal" data-tags="hardware"
+        data-title="Smartwatch (prototype)"
+        data-subtitle="Embedded systems (early-stage)"
+        data-body="I built a smartwatch prototype as a hobby project. While it was never packaged into a final wearable enclosure, both the hardware and firmware worked as intended. If I were to rebuild it, I would choose a more efficient MCU and a custom battery to make it more practical."
+        data-img="/assets/img/projects/smartwatch.png">
+        <div class="pr-card__img" style="--img:url('/assets/img/projects/smartwatch.png')"></div>
+        <div class="pr-card__shade" aria-hidden="true"></div>
+        <div class="pr-card__content">
+          <div class="pr-card__kicker">Embedded · Product</div>
+          <h3 class="pr-card__h">Smartwatch</h3>
+          <p class="pr-card__p">Smartwatch prototype to expand embedded systems knowledge—health monitoring, activity tracking, and connectivity.</p>
+          <div class="pr-card__tags">
+            <span class="tag">Embedded</span><span class="tag">PCB</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pr-card reveal" data-tags="hardware mech"
+        data-title="Bachelor Project (Autonomous Trimaran)"
+        data-subtitle="Energy-harvesting, self-sustaining ocean platform"
+        data-body="In cooperation with Kongsberg, our team built a 3×3×3 meter trimaran for maritime surveying using Kongsberg’s WBAT as the sonar system. The trimaran was autonomous and self-sustaining, harvesting energy from wave motion. The boat is 3D printed and the system is fully custom. In a team of four, I was co-team lead and responsible for 3D modeling, the energy-harvesting system, and PCB design for the power electronics."
+        data-img="/assets/img/projects/trimaran.png">
+        <div class="pr-card__img" style="--img:url('/assets/img/projects/trimaran.png')"></div>
+        <div class="pr-card__shade" aria-hidden="true"></div>
+        <div class="pr-card__content">
+          <div class="pr-card__kicker">Bachelor · Systems</div>
+          <h3 class="pr-card__h">Autonomous Trimaran</h3>
+          <p class="pr-card__p">Bachelor project: autonomous, energy-harvesting trimaran for long-term ocean monitoring.</p>
+          <div class="pr-card__tags">
+            <span class="tag">PCB</span><span class="tag">Mech/3D</span><span class="tag">Embedded</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pr-card reveal" data-tags="mech military code"
+        data-title="Embedded software development for FPH462"
+        data-subtitle="Firmware development"
+        data-body="Firmware development for the FPH462. Solely responsible for the full firmware and software stack for the Field Power Hub. The system includes a display and supports common military communication protocols such as SMBus, RS485, UART, USB, and CAN. The FPH is also connected to a web server for remote monitoring and control."
+        data-img="/assets/img/projects/embedded_c_fph.png">
+        <div class="pr-card__img" style="--img:url('/assets/img/projects/embedded_c_fph.png')"></div>
+        <div class="pr-card__shade" aria-hidden="true"></div>
+        <div class="pr-card__content">
+          <div class="pr-card__kicker">Voltina</div>
+          <h3 class="pr-card__h">Firmware Development</h3>
+          <p class="pr-card__p">Firmware development for the Field Power Hub designed for the military.</p>
+          <div class="pr-card__tags">
+            <span class="tag">Code</span><span class="tag">Military</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pr-card reveal" data-tags="hardware"
+        data-title="Energy harvesting circuit"
+        data-subtitle="Wave energy conversion unit"
+        data-body="Energy-harvesting circuit for a wave energy conversion unit, including rectification, power management, regulation, and system interfacing."
+        data-img="/assets/img/projects/eenergyharvesting.png">
+        <div class="pr-card__img" style="--img:url('/assets/img/projects/energyharvesting.png')"></div>
+        <div class="pr-card__shade" aria-hidden="true"></div>
+        <div class="pr-card__content">
+          <div class="pr-card__kicker">Electronics · Power</div>
+          <h3 class="pr-card__h">Energy Harvesting Circuit</h3>
+          <p class="pr-card__p">Power path and conversion for the wave energy unit.</p>
+          <div class="pr-card__tags">
+            <span class="tag">Hardware</span><span class="tag">Power</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pr-card reveal" data-tags="software  mech"
+        data-title="API Vulcaza (internship)"
+        data-subtitle="Python API for parametric Blender models"
+        data-body="Developed a Python API that enables customers to customize 3D models in Blender via a web UI (sliders/inputs for geometry and text). The model updates dynamically and exports STL for 3D printing."
+        data-img="/assets/img/projects/vulkaza.png">
+        <div class="pr-card__img" style="--img:url('/assets/img/projects/vulkaza.png')"></div>
+        <div class="pr-card__shade" aria-hidden="true"></div>
+        <div class="pr-card__content">
+          <div class="pr-card__kicker">Software · Automation</div>
+          <h3 class="pr-card__h">API Vulcaza</h3>
+          <p class="pr-card__p">Parametric Blender + STL pipeline.</p>
+          <div class="pr-card__tags">
+            <span class="tag">Code</span><span class="tag">3D</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pr-card reveal" data-tags="hardware biomed"
+        data-title="EMG & PPG circuits"
+        data-subtitle="Bio-signal acquisition + filtering"
+        data-body="Designed EMG and PPG measurement circuits. EMG: acquisition and filtering for muscle activity with noise reduction, used to control a robotic arm. PPG: heart rate and blood-flow measurement via light absorption using LEDs and photodetectors."
+        data-img="/assets/img/projects/emg.png">
+        <div class="pr-card__img" style="--img:url('/assets/img/projects/emg.png')"></div>
+        <div class="pr-card__shade" aria-hidden="true"></div>
+        <div class="pr-card__content">
+          <div class="pr-card__kicker">Robotarm controlled by muscle contractions</div>
+          <h3 class="pr-card__h">EMG &amp; PPG Circuits</h3>
+          <p class="pr-card__p">Acquisition, filtering, and real-world use.</p>
+          <div class="pr-card__tags">
+            <span class="tag">Biomedical</span><span class="tag">Hardware</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pr-card reveal" data-tags="software"
+        data-title="Personal website"
+        data-subtitle="This site"
+        data-body="Developed the personal website you’re browsing now. Take a look around."
+        data-img="/assets/img/projects/web_design.png">
+        <div class="pr-card__img" style="--img:url('/assets/img/projects/web_design.png')"></div>
+        <div class="pr-card__shade" aria-hidden="true"></div>
+        <div class="pr-card__content">
+          <div class="pr-card__kicker">Web · Frontend</div>
+          <h3 class="pr-card__h">Personal Website</h3>
+          <p class="pr-card__p">HTML, CSS, and JavaScript.</p>
+          <div class="pr-card__tags">
+            <span class="tag">Code</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pr-card reveal" data-tags="biomed hardware"
+        data-title="Biomedical pneumatic sensory board"
+        data-subtitle="Balance study · pressure/oxygen measurement"
+        data-body="Pneumatic measurement platform for balance studies. Uses controlled tilting and shifting under load to measure oxygen levels in the foot. Developed collaboratively with a fellow student and an external industry partner."
+        data-img="/assets/img/projects/gaitling">
+        <div class="pr-card__img" style="--img:url('/assets/img/projects/gaitline.png')"></div>
+        <div class="pr-card__shade" aria-hidden="true"></div>
+        <div class="pr-card__content">
+          <div class="pr-card__kicker">Biomedical · Prototype</div>
+          <h3 class="pr-card__h">Pneumatic Sensory Board</h3>
+          <p class="pr-card__p">Instrumentation for balance research.</p>
+          <div class="pr-card__tags">
+            <span class="tag">Biomedical</span><span class="tag">Hardware</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pr-card reveal" data-tags="mech hardware"
+        data-title="Electric guitars (x3)"
+        data-subtitle="Built from scratch"
+        data-body="Built three electric guitars from scratch—selecting, shaping, and integrating all components by hand to explore both the mechanical and electrical aspects of instrument design."
+        data-img="/assets/img/projects/gitars.png">
+        <div class="pr-card__img" style="--img:url('/assets/img/projects/gitars.png')"></div>
+        <div class="pr-card__shade" aria-hidden="true"></div>
+        <div class="pr-card__content">
+          <div class="pr-card__kicker">Build · Craft</div>
+          <h3 class="pr-card__h">Electric Guitars</h3>
+          <p class="pr-card__p">Mechanical build + electronics integration.</p>
+          <div class="pr-card__tags">
+            <span class="tag">Mech/3D</span><span class="tag">Hardware</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <footer class="projects__footer reveal">
+      <!-- <div class="projects__footnote">
+        Do you want to know more or have more pictures? Follow the link to the portfolio doc!
+      </div> -->
+    </footer>
+  </main>
+
+  <!-- Modal -->
+  <div class="pr-modal" id="prModal" aria-hidden="true">
+    <div class="pr-modal__backdrop" data-close="1"></div>
+    <div class="pr-modal__panel" role="dialog" aria-modal="true" aria-label="Project details">
+      <button class="pr-modal__close" type="button" aria-label="Close" data-close="1">×</button>
+      <div class="pr-modal__media">
+        <div class="pr-modal__img" id="prModalImg" aria-hidden="true"></div>
+      </div>
+      <div class="pr-modal__body">
+        <div class="pr-modal__kicker" id="prModalSub"></div>
+        <h2 class="pr-modal__title" id="prModalTitle"></h2>
+        <p class="pr-modal__text" id="prModalText"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/js/projects.js"></script>
+</body>
 </html>

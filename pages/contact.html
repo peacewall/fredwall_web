@@ -1,16 +1,88 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
-    <link rel="stylesheet" href="../assets/css/styles.css" />
-  </head>
-  <body>
-    <main class="container">
-      <h1>Contact</h1>
-      <p>Email: you@example.com</p>
-      <p><a href="/">← Back</a></p>
-    </main>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact · Fredwall</title>
+
+  <link rel="stylesheet" href="/assets/css/home.css" />
+  <link rel="stylesheet" href="/assets/css/contact.css" />
+</head>
+
+<body class="contact">
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Primary">
+      <div class="nav__links">
+        <a href="/">Home</a>
+        <a href="/pages/work-education.html">Work &amp; Education</a>
+        <a href="/pages/projects.html">Projects</a>
+        <a href="/pages/volleyball.html">Volleyball</a>
+        <a href="/pages/content.html">Content</a>
+        <a href="/pages/contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contact">
+    <section class="contact__panel">
+      <div class="contact__left" aria-label="Portrait">
+        <img src="/assets/img/profile/contact.png" alt="Håvard Fredwall portrait" />
+        <div class="contact__fade" aria-hidden="true"></div>
+      </div>
+
+      <div class="contact__right">
+        <h1 class="contact__title">Let’s connect.</h1>
+        <p class="contact__lead">
+          It looks like we should link up! Send me a message on instgram or use the form bellow so we can have a quick chat.
+        </p>
+
+        <div class="contact__links">
+          <a class="pill" href="https://www.instagram.com/sunsetspikes/" target="_blank" rel="noreferrer">
+            Instagram · @sunsetspikes
+          </a>
+          <a class="pill" href="https://www.linkedin.com/in/h%C3%A5vard-fredwall-548137234/" target="_blank" rel="noreferrer">
+            LinkedIn · Håvard Fredwall
+          </a>
+          <!-- <a class="pill" href="mailto:haavard.fredwall@gmail.com">
+            Email · haavard.fredwall@gmail.com
+          </a> -->
+        </div>
+
+        <div class="formWrap">
+          <h2 class="formTitle">Send a message</h2>
+
+          <!-- Formspree: replace YOUR_FORM_ID after you create the form -->
+          <form id="contactForm" class="form" action="https://formspree.io/f/mpqaypkz" method="POST">
+            <div class="row">
+              <label>
+                <span>Name</span>
+                <input name="name" type="text" placeholder="Your name" required />
+              </label>
+
+              <label>
+                <span>Email</span>
+                <input name="email" type="email" placeholder="you@email.com" required />
+              </label>
+            </div>
+
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="6" placeholder="Write your message..." required></textarea>
+            </label>
+
+            <!-- Helps Formspree set Reply-To and email subject -->
+            <input type="hidden" name="_subject" value="New message from fredwall web" />
+            <input type="hidden" name="_replyto" id="replyToField" value="" />
+
+            <button class="btnSend" type="submit">Submit</button>
+
+            <p class="status" id="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/assets/js/contact.js"></script>
+</body>
 </html>

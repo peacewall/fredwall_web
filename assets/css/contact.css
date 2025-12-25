@@ -1,0 +1,273 @@
+:root{
+  --bg:#0b0c10;
+  --fg:#e8eaf0;
+  --muted:#a7adbd;
+
+  --nav-h: 66px;
+
+  --line: rgba(255,255,255,.10);
+  --panel: rgba(255,255,255,.06);
+  --panel2: rgba(255,255,255,.04);
+  --shadow: 0 14px 60px rgba(0,0,0,.45);
+
+  /* subtle sunset accent */
+  --accent1: rgba(255,122,24,.55);
+  --accent2: rgba(255,64,129,.40);
+  --accent3: rgba(167,82,255,.30);
+}
+
+/* =========================================================
+   NAV — force the same “nice” dark nav on Contact page
+   (works with your existing header/nav HTML)
+   ========================================================= */
+
+/* Dark fade behind nav so it blends into the page background */
+body.contact::before{
+  content:"";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-h);
+  z-index: 999;              /* behind nav */
+  pointer-events: none;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(11,12,16,.92),
+    rgba(11,12,16,.60),
+    rgba(11,12,16,0)
+  );
+}
+
+/* Keep nav visible and styled (same vibe as home.css) */
+body.contact .nav-wrap{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  background: linear-gradient(
+    to bottom,
+    rgba(11,12,16,.88),
+    rgba(11,12,16,.35)
+  );
+
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+/* Ensure links remain readable on top of gradients */
+body.contact .nav__links a{
+  color: rgba(255,255,255,.72);
+}
+body.contact .nav__links a:hover{
+  color: rgba(255,255,255,.92);
+}
+body.contact .nav__links a.active{
+  color: rgba(255,255,255,.94);
+  background: rgba(255,255,255,.06);
+}
+
+/* =========================================================
+   PAGE BACKGROUND + LAYOUT
+   ========================================================= */
+
+.contact{
+  min-height: calc(100vh - var(--nav-h));
+  background:
+    radial-gradient(900px 700px at 18% 20%, var(--accent1), transparent 62%),
+    radial-gradient(900px 700px at 82% 40%, var(--accent2), transparent 62%),
+    radial-gradient(900px 700px at 55% 85%, var(--accent3), transparent 65%),
+    var(--bg);
+  padding: 1.25rem 0 3rem;
+}
+
+.contact__panel{
+  width: min(1350px, calc(100% - 2rem));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 500px 1fr; /* smaller left column */
+  gap: 0;
+
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(0,0,0,.22);
+  box-shadow: var(--shadow);
+}
+
+/* LEFT: photo column */
+.contact__left{
+  position: relative;
+  background: rgba(255,255,255,.03);
+  min-height: 520px;
+}
+
+.contact__left img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  object-position: 50% 25%;
+  display:block;
+  filter: saturate(1.02) contrast(1.02);
+}
+
+.contact__fade{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(180deg, rgba(11,12,16,.05), rgba(11,12,16,.75)),
+    linear-gradient(90deg, rgba(11,12,16,.35), rgba(11,12,16,.10));
+}
+
+/* RIGHT: content + form */
+.contact__right{
+  padding: 2.2rem 2.2rem;
+  background: rgba(255,255,255,.03);
+}
+
+.contact__title{
+  margin: 0 0 .6rem;
+  font-size: clamp(2.1rem, 4vw, 3rem);
+  letter-spacing: .3px;
+}
+
+.contact__lead{
+  margin: 0 0 1.2rem;
+  color: rgba(255,255,255,.84);
+  line-height: 1.7;
+  max-width: 64ch;
+}
+
+/* Social links row */
+.contact__links{
+  display:flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-bottom: 1.4rem;
+}
+
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:.45rem;
+  padding: .55rem .85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.05);
+  color: rgba(255,255,255,.86);
+  transition: transform .2s ease, background .2s ease, border-color .2s ease;
+}
+.pill:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.16);
+}
+
+/* Form wrap */
+.formWrap{
+  margin-top: 1.1rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.formTitle{
+  margin: 0 0 .9rem;
+  font-size: 1.25rem;
+  font-weight: 850;
+}
+
+/* Form styling */
+.form{
+  display:flex;
+  flex-direction: column;
+  gap: .9rem;
+}
+
+.row{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .85rem;
+}
+
+label span{
+  display:block;
+  font-size: .92rem;
+  color: rgba(255,255,255,.80);
+  margin-bottom: .35rem;
+}
+
+/* Inputs */
+input, textarea{
+  width:100%;
+  padding: .85rem .95rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.28);
+  color: var(--fg);
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+textarea{
+  resize: vertical;
+  min-height: 140px;
+}
+
+input::placeholder, textarea::placeholder{
+  color: rgba(255,255,255,.45);
+}
+
+input:focus, textarea:focus{
+  border-color: rgba(255,122,24,.35);
+  box-shadow: 0 0 0 3px rgba(255,122,24,.12);
+  background: rgba(0,0,0,.34);
+}
+
+/* Button */
+.btnSend{
+  margin-top: .25rem;
+  padding: .9rem 1.1rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: linear-gradient(135deg, rgba(255,122,24,.55), rgba(255,64,129,.35));
+  color: rgba(255,255,255,.92);
+  font-weight: 850;
+  cursor: pointer;
+  transition: transform .2s ease, filter .2s ease, border-color .2s ease;
+  width: fit-content;
+}
+
+.btnSend:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  border-color: rgba(255,255,255,.18);
+}
+
+.status{
+  margin: .15rem 0 0;
+  color: rgba(255,255,255,.78);
+  min-height: 1.2em;
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .contact__panel{
+    grid-template-columns: 1fr;
+  }
+  .contact__left{
+    min-height: 260px;
+  }
+  .contact__right{
+    padding: 1.6rem 1.2rem;
+  }
+  .row{
+    grid-template-columns: 1fr;
+  }
+}
