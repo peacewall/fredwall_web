@@ -10,7 +10,12 @@
   --nav-h:66px;
   --radius:18px;
 }
+/* 
+ cold collors --accent:#69dffa;       gold-ish */
+  /* accent2:#4f84b0 */
 
+ /* --accent:#d6b25e;       gold-ish */
+  /* --accent2:#caa64f; */
 *{ box-sizing:border-box; }
 html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
 a{ color:inherit; text-decoration:none; }
@@ -371,7 +376,7 @@ a{ color:inherit; text-decoration:none; }
 }
 .card:hover{
   transform: translateY(-3px);
-  border-color: rgba(214,178,94,.28);
+  border-color: rgba(94, 164, 214, 0.366);
   background: rgba(255,255,255,.06);
 }
 

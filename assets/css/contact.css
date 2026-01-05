@@ -3,25 +3,57 @@
   --fg:#e8eaf0;
   --muted:#a7adbd;
 
+  /* match your global nav height */
   --nav-h: 66px;
 
   --line: rgba(255,255,255,.10);
-  --panel: rgba(255,255,255,.06);
-  --panel2: rgba(255,255,255,.04);
   --shadow: 0 14px 60px rgba(0,0,0,.45);
+}
 
-  /* subtle sunset accent */
-  --accent1: rgba(255,122,24,.55);
-  --accent2: rgba(255,64,129,.40);
-  --accent3: rgba(167,82,255,.30);
+*{ box-sizing: border-box; }
+
+/* Ensure base page stays dark even before video paints */
+body.contact{
+  background: var(--bg);
+  color: var(--fg);
 }
 
 /* =========================================================
-   NAV — force the same “nice” dark nav on Contact page
-   (works with your existing header/nav HTML)
+   Fullscreen video background + overlay
+   ========================================================= */
+.contact__bg{
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: 50% 50%;
+  z-index: 0;
+  filter: saturate(1.05) contrast(1.05);
+}
+
+/* Readability overlay */
+.contact__overlay{
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(900px 650px at 20% 25%, rgba(255,255,255,.06), transparent 60%),
+    linear-gradient(180deg, rgba(11,12,16,.55), rgba(11,12,16,.82));
+}
+
+/* Keep contact content above video */
+main.contact{
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================================
+   NAV — same height + same “nice” dark look
    ========================================================= */
 
-/* Dark fade behind nav so it blends into the page background */
+/* subtle fade behind nav so white never shows through */
 body.contact::before{
   content:"";
   position: fixed;
@@ -29,36 +61,36 @@ body.contact::before{
   left: 0;
   right: 0;
   height: var(--nav-h);
-  z-index: 999;              /* behind nav */
+  z-index: 999;     /* behind nav */
   pointer-events: none;
-
   background: linear-gradient(
     to bottom,
     rgba(11,12,16,.92),
-    rgba(11,12,16,.60),
+    rgba(11,12,16,.72),
     rgba(11,12,16,0)
   );
 }
 
-/* Keep nav visible and styled (same vibe as home.css) */
+
+/* Force nav to render like your other pages, and keep height stable */
 body.contact .nav-wrap{
   position: sticky;
   top: 0;
   z-index: 1000;
 
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
+  /* do NOT add padding here; it changes height */
   background: linear-gradient(
     to bottom,
-    rgba(11,12,16,.88),
-    rgba(11,12,16,.35)
+    rgba(11,12,16,.86),
+    rgba(11,12,16,.30)
   );
-
   border-bottom: 1px solid rgba(255,255,255,.06);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
-/* Ensure links remain readable on top of gradients */
+/* If your global nav uses line-height/padding, this keeps links readable */
 body.contact .nav__links a{
   color: rgba(255,255,255,.72);
 }
@@ -71,39 +103,35 @@ body.contact .nav__links a.active{
 }
 
 /* =========================================================
-   PAGE BACKGROUND + LAYOUT
+   PAGE LAYOUT
    ========================================================= */
 
 .contact{
   min-height: calc(100vh - var(--nav-h));
-  background:
-    radial-gradient(900px 700px at 18% 20%, var(--accent1), transparent 62%),
-    radial-gradient(900px 700px at 82% 40%, var(--accent2), transparent 62%),
-    radial-gradient(900px 700px at 55% 85%, var(--accent3), transparent 65%),
-    var(--bg);
   padding: 1.25rem 0 3rem;
 }
 
+/* Smaller portrait: reduce left column width */
 .contact__panel{
-  width: min(1350px, calc(100% - 2rem));
+  width: min(1250px, calc(100% - 2rem));
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 500px 1fr; /* smaller left column */
+  grid-template-columns: 380px 1fr; /* smaller left */
   gap: 0;
 
   border-radius: 26px;
   overflow: hidden;
   border: 1px solid var(--line);
-  background: rgba(0,0,0,.22);
+  background: rgba(8, 13, 22, 0.661);
   box-shadow: var(--shadow);
 }
 
 /* LEFT: photo column */
 .contact__left{
   position: relative;
-  background: rgba(255,255,255,.03);
-  min-height: 520px;
+  background: rgba(255, 255, 255, 0.086);
+  min-height: 420px;
 }
 
 .contact__left img{
@@ -112,7 +140,7 @@ body.contact .nav__links a.active{
   width:100%;
   height:100%;
   object-fit: cover;
-  object-position: 50% 25%;
+  object-position: 50% 22%;
   display:block;
   filter: saturate(1.02) contrast(1.02);
 }
@@ -122,14 +150,14 @@ body.contact .nav__links a.active{
   inset:0;
   pointer-events:none;
   background:
-    linear-gradient(180deg, rgba(11,12,16,.05), rgba(11,12,16,.75)),
-    linear-gradient(90deg, rgba(11,12,16,.35), rgba(11,12,16,.10));
+    linear-gradient(180deg, rgba(11, 12, 16, 0.264), rgba(11,12,16,.78)),
+    linear-gradient(90deg, rgba(11,12,16,.45), rgba(11,12,16,.10));
 }
 
 /* RIGHT: content + form */
 .contact__right{
   padding: 2.2rem 2.2rem;
-  background: rgba(255,255,255,.03);
+  background: rgba(255, 255, 255, 0.045);
 }
 
 .contact__title{
@@ -225,8 +253,8 @@ input::placeholder, textarea::placeholder{
 }
 
 input:focus, textarea:focus{
-  border-color: rgba(255,122,24,.35);
-  box-shadow: 0 0 0 3px rgba(255,122,24,.12);
+  border-color: rgba(255, 255, 255, 0.767);
+  box-shadow: 0 0 0 3px rgba(255,255,255,.10);
   background: rgba(0,0,0,.34);
 }
 
@@ -236,18 +264,18 @@ input:focus, textarea:focus{
   padding: .9rem 1.1rem;
   border-radius: 16px;
   border: 1px solid rgba(255,255,255,.12);
-  background: linear-gradient(135deg, rgba(255,122,24,.55), rgba(255,64,129,.35));
+  background: rgba(255,255,255,.08);
   color: rgba(255,255,255,.92);
   font-weight: 850;
   cursor: pointer;
-  transition: transform .2s ease, filter .2s ease, border-color .2s ease;
+  transition: transform .2s ease, filter .2s ease, border-color .2s ease, background .2s ease;
   width: fit-content;
 }
-
 .btnSend:hover{
   transform: translateY(-1px);
   filter: brightness(1.05);
   border-color: rgba(255,255,255,.18);
+  background: rgba(255,255,255,.10);
 }
 
 .status{

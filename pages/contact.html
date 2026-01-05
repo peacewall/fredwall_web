@@ -18,10 +18,18 @@
         <a href="/pages/projects.html">Projects</a>
         <a href="/pages/volleyball.html">Volleyball</a>
         <a href="/pages/content.html">Content</a>
-        <a href="/pages/contact.html">Contact</a>
+        <a class="active" href="/pages/contact.html">Contact</a>
       </div>
     </nav>
   </header>
+
+  
+
+  <!-- Fullscreen video background -->
+  <video class="contact__bg" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+    <source src="/assets/video/bg.mp4" type="video/mp4" />
+  </video>
+  <div class="contact__overlay" aria-hidden="true"></div>
 
   <main class="contact">
     <section class="contact__panel">
@@ -33,7 +41,7 @@
       <div class="contact__right">
         <h1 class="contact__title">Let’s connect.</h1>
         <p class="contact__lead">
-          It looks like we should link up! Send me a message on instgram or use the form bellow so we can have a quick chat.
+          Maybe we should link up? Send me a message on Instagram, or use the form below and I’ll get back to you as fast as I can!
         </p>
 
         <div class="contact__links">
@@ -43,15 +51,11 @@
           <a class="pill" href="https://www.linkedin.com/in/h%C3%A5vard-fredwall-548137234/" target="_blank" rel="noreferrer">
             LinkedIn · Håvard Fredwall
           </a>
-          <!-- <a class="pill" href="mailto:haavard.fredwall@gmail.com">
-            Email · haavard.fredwall@gmail.com
-          </a> -->
         </div>
 
         <div class="formWrap">
           <h2 class="formTitle">Send a message</h2>
 
-          <!-- Formspree: replace YOUR_FORM_ID after you create the form -->
           <form id="contactForm" class="form" action="https://formspree.io/f/mpqaypkz" method="POST">
             <div class="row">
               <label>
@@ -70,12 +74,10 @@
               <textarea name="message" rows="6" placeholder="Write your message..." required></textarea>
             </label>
 
-            <!-- Helps Formspree set Reply-To and email subject -->
             <input type="hidden" name="_subject" value="New message from fredwall web" />
             <input type="hidden" name="_replyto" id="replyToField" value="" />
 
             <button class="btnSend" type="submit">Submit</button>
-
             <p class="status" id="status" aria-live="polite"></p>
           </form>
         </div>

@@ -132,7 +132,7 @@ body{
 }
 .home__portraitWrap:hover{
   transform: translateY(-3px) scale(1.01);
-  border-color: rgba(255,122,24,.25);
+  border-color: rgba(24, 240, 255, 0.305);
 }
 
 .home__portrait{

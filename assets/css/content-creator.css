@@ -4,10 +4,10 @@
   --muted: rgba(255,255,255,.70);
 
   /* Sunset palette */
-  --sun1: rgba(255, 122, 24, .55);
-  --sun2: rgba(255, 64, 129, .42);
-  --sun3: rgba(167, 82, 255, .38);
-  --sun4: rgba(255, 208, 92, .30);
+  --sun1: rgba(126, 62, 46, 0.267);
+  --sun2: rgba(164, 40, 81, 0.346);
+  --sun3: rgba(140, 68, 68, 0.271);
+  --sun4: rgba(255, 209, 92, 0.158);
 
   --glass: rgba(255,255,255,.06);
   --glass2: rgba(255,255,255,.08);
@@ -69,8 +69,8 @@ body{
   width: 34px;
   height: 34px;
   border-radius: 999px;
-  background: radial-gradient(circle at 35% 35%, rgba(255,255,255,.35), rgba(255,255,255,0) 55%),
-              linear-gradient(135deg, rgba(255,122,24,.8), rgba(255,64,129,.55));
+  background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.178), rgba(255,255,255,0) 55%),
+              linear-gradient(135deg, rgba(255, 120, 24, 0.144), rgba(255, 64, 128, 0.127));
   box-shadow: 0 10px 26px rgba(0,0,0,.35);
 }
 .cc-brandText{
@@ -223,7 +223,7 @@ body{
   align-items: baseline;
   gap: .35rem;
 
-  background: linear-gradient(90deg, rgba(255,122,24,.92), rgba(255,64,129,.78), rgba(167,82,255,.70));
+  background: linear-gradient(90deg, rgba(255, 174, 24, 0.599), rgba(255,64,129,.78), rgba(167,82,255,.70));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -402,7 +402,7 @@ body{
   padding: .75rem .8rem;
   border-radius: 18px;
   z-index: 5;
-  width: 140px;
+  width: 190px;
 }
 .mini__title{
   color: rgba(255,255,255,.72);
@@ -442,7 +442,7 @@ body{
   border-radius: 999px;
 }
 .dot--ig{ background: rgba(255,64,129,.85); }
-.dot--tt{ background: rgba(255,122,24,.85); }
+.dot--tt{ background: rgba(42, 180, 222, 0.85); }
 
 .card-right__title{
   font-weight: 850;
