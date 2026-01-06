@@ -50,7 +50,7 @@ function formatNumber(n){
 }
 
 if (counterEl) {
-  const start = Number(counterEl.dataset.start || "65686340");
+  const start = Number(counterEl.dataset.start || "95686340");
 
   // choose a believable rate: ~ +60 to +140 per second, with tiny variation
   let baseRate = 500; // per second
