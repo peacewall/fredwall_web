@@ -12,10 +12,11 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Fredwalls · Håvard Fredwall" />
   <meta property="og:description" content="Volleyball sketches with a real athlete behind them. Beach volleyball pro, electrical engineer, Oslo." />
-  <meta property="og:image" content="https://fredwalls.no/assets/img/home/vb-block.webp" />
+  <meta property="og:image" content="https://fredwalls.no/assets/img/og.jpg" />
   <meta property="og:url" content="https://fredwalls.no/" />
   <meta name="theme-color" content="#0b0c10" />
 
+  <link rel="preload" as="image" href="/assets/img/home/bg-poster.jpg" />
   <link rel="stylesheet" href="/assets/css/home.css" />
   <link rel="stylesheet" href="/assets/css/landing.css" />
 </head>
@@ -33,7 +34,7 @@
   </header>
 
   <!-- Fixed background: the star video, a dark veil, and the volleyball that flies as you scroll -->
-  <video class="home__bg" autoplay muted loop playsinline preload="metadata" data-bg-video aria-hidden="true">
+  <video class="home__bg" muted loop playsinline preload="none" poster="/assets/img/home/bg-poster.jpg" aria-hidden="true">
     <source src="/assets/video/bg.mp4" type="video/mp4" />
   </video>
   <div class="home__overlay" aria-hidden="true"></div>
@@ -84,19 +85,19 @@
       </header>
       <div class="reels">
         <a class="reel reveal" href="https://www.instagram.com/reel/DfptP87R020/" target="_blank" rel="noopener" aria-label="Watch this reel on Instagram">
-          <video autoplay muted loop playsinline preload="metadata" poster="/assets/video/reels/DfptP87R020.jpg" data-bg-video>
+          <video muted playsinline preload="none" poster="/assets/video/reels/DfptP87R020.jpg">
             <source src="/assets/video/reels/DfptP87R020.mp4" type="video/mp4" />
           </video>
           <span class="reel__views"><strong data-stat="featured.0.views">229M</strong> views</span>
         </a>
         <a class="reel reveal" href="https://www.instagram.com/reel/DfjaiotAX02/" target="_blank" rel="noopener" aria-label="Watch this reel on Instagram">
-          <video autoplay muted loop playsinline preload="metadata" poster="/assets/video/reels/DfjaiotAX02.jpg" data-bg-video>
+          <video muted playsinline preload="none" poster="/assets/video/reels/DfjaiotAX02.jpg">
             <source src="/assets/video/reels/DfjaiotAX02.mp4" type="video/mp4" />
           </video>
           <span class="reel__views"><strong data-stat="featured.1.views">39.4M</strong> views</span>
         </a>
         <a class="reel reveal" href="https://www.instagram.com/reel/DNxpLTe2JX7/" target="_blank" rel="noopener" aria-label="Watch this reel on Instagram">
-          <video autoplay muted loop playsinline preload="metadata" poster="/assets/video/reels/DNxpLTe2JX7.jpg" data-bg-video>
+          <video muted playsinline preload="none" poster="/assets/video/reels/DNxpLTe2JX7.jpg">
             <source src="/assets/video/reels/DNxpLTe2JX7.mp4" type="video/mp4" />
           </video>
           <span class="reel__views"><strong data-stat="featured.2.views">20.6M</strong> views</span>
@@ -111,21 +112,21 @@
     <!-- PHOTO STRIP -->
     <section class="strip" aria-label="Beach volleyball photos">
       <div class="strip__track">
-        <img src="/assets/img/home/vb-block.webp" alt="Block at the net" loading="lazy" />
-        <img src="/assets/img/home/vb-sunset.webp" alt="Centre court at sunset" loading="lazy" />
-        <img src="/assets/img/home/vb-jump.webp" alt="Jump set on the beach" loading="lazy" />
-        <img src="/assets/img/home/vb-duel.webp" alt="Duel at the net" loading="lazy" />
-        <img src="/assets/img/home/vb-match.webp" alt="Tournament match" loading="lazy" />
-        <img src="/assets/img/home/vb-net.webp" alt="Attack at the net" loading="lazy" />
-        <img src="/assets/img/home/vb-dig.webp" alt="Dig in the sand" loading="lazy" />
+        <img src="/assets/img/home/vb-block.webp" alt="Block at the net" width="536" height="520" loading="lazy" decoding="async" />
+        <img src="/assets/img/home/vb-sunset.webp" alt="Centre court at sunset" width="780" height="520" loading="lazy" decoding="async" />
+        <img src="/assets/img/home/vb-jump.webp" alt="Jump set on the beach" width="336" height="520" loading="lazy" decoding="async" />
+        <img src="/assets/img/home/vb-duel.webp" alt="Duel at the net" width="552" height="520" loading="lazy" decoding="async" />
+        <img src="/assets/img/home/vb-match.webp" alt="Tournament match" width="780" height="520" loading="lazy" decoding="async" />
+        <img src="/assets/img/home/vb-net.webp" alt="Attack at the net" width="388" height="520" loading="lazy" decoding="async" />
+        <img src="/assets/img/home/vb-dig.webp" alt="Dig in the sand" width="780" height="520" loading="lazy" decoding="async" />
         <!-- repeated once so the strip loops without a seam -->
-        <img src="/assets/img/home/vb-block.webp" alt="" aria-hidden="true" loading="lazy" />
-        <img src="/assets/img/home/vb-sunset.webp" alt="" aria-hidden="true" loading="lazy" />
-        <img src="/assets/img/home/vb-jump.webp" alt="" aria-hidden="true" loading="lazy" />
-        <img src="/assets/img/home/vb-duel.webp" alt="" aria-hidden="true" loading="lazy" />
-        <img src="/assets/img/home/vb-match.webp" alt="" aria-hidden="true" loading="lazy" />
-        <img src="/assets/img/home/vb-net.webp" alt="" aria-hidden="true" loading="lazy" />
-        <img src="/assets/img/home/vb-dig.webp" alt="" aria-hidden="true" loading="lazy" />
+        <img src="/assets/img/home/vb-block.webp" alt="" aria-hidden="true" width="536" height="520" loading="lazy" decoding="async" />
+        <img src="/assets/img/home/vb-sunset.webp" alt="" aria-hidden="true" width="780" height="520" loading="lazy" decoding="async" />
+        <img src="/assets/img/home/vb-jump.webp" alt="" aria-hidden="true" width="336" height="520" loading="lazy" decoding="async" />
+        <img src="/assets/img/home/vb-duel.webp" alt="" aria-hidden="true" width="552" height="520" loading="lazy" decoding="async" />
+        <img src="/assets/img/home/vb-match.webp" alt="" aria-hidden="true" width="780" height="520" loading="lazy" decoding="async" />
+        <img src="/assets/img/home/vb-net.webp" alt="" aria-hidden="true" width="388" height="520" loading="lazy" decoding="async" />
+        <img src="/assets/img/home/vb-dig.webp" alt="" aria-hidden="true" width="780" height="520" loading="lazy" decoding="async" />
       </div>
     </section>
 
