@@ -17,7 +17,7 @@
         <a href="/pages/work-education.html">Work &amp; Education</a>
         <a href="/pages/projects.html">Projects</a>
         <a href="/pages/volleyball.html">Volleyball</a>
-        <a href="/pages/content.html">Content</a>
+        <a href="/#brands">Brands</a>
         <a class="active" href="/pages/contact.html">Contact</a>
       </div>
     </nav>
@@ -26,27 +26,30 @@
   
 
   <!-- Fullscreen video background -->
-  <video class="contact__bg" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+  <video class="contact__bg" autoplay muted loop playsinline preload="metadata" data-bg-video aria-hidden="true">
     <source src="/assets/video/bg.mp4" type="video/mp4" />
   </video>
   <div class="contact__overlay" aria-hidden="true"></div>
 
   <main class="contact">
-    <section class="contact__panel">
+    <section class="contact__panel reveal">
       <div class="contact__left" aria-label="Portrait">
-        <img src="/assets/img/profile/contact.png" alt="Håvard Fredwall portrait" />
+        <img src="/assets/img/profile/contact.png" alt="Håvard Fredwall portrait" decoding="async" />
         <div class="contact__fade" aria-hidden="true"></div>
       </div>
 
       <div class="contact__right">
         <h1 class="contact__title">Let’s connect.</h1>
         <p class="contact__lead">
-          Maybe we should link up? Send me a message on Instagram, or use the form below and I’ll get back to you as fast as I can!
+          If you would like to work together, email me, message me on Instagram or use the form below and I will get back to you as soon as I can.
         </p>
 
         <div class="contact__links">
-          <a class="pill" href="https://www.instagram.com/sunsetspikes/" target="_blank" rel="noreferrer">
-            Instagram · @sunsetspikes
+          <a class="pill" href="mailto:h@fredwalls.no">
+            h@fredwalls.no
+          </a>
+          <a class="pill" href="https://www.instagram.com/_fredwalls" target="_blank" rel="noreferrer">
+            Instagram · @_fredwalls
           </a>
           <a class="pill" href="https://www.linkedin.com/in/h%C3%A5vard-fredwall-548137234/" target="_blank" rel="noreferrer">
             LinkedIn · Håvard Fredwall
@@ -85,6 +88,7 @@
     </section>
   </main>
 
-  <script src="/assets/js/contact.js"></script>
+  <script defer src="/assets/js/site.js"></script>
+  <script defer src="/assets/js/contact.js"></script>
 </body>
 </html>

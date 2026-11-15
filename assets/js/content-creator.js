@@ -1,15 +1,7 @@
-// Reveal animations
-const revealEls = Array.from(document.querySelectorAll(".reveal"));
-const io = new IntersectionObserver((entries) => {
-  for (const e of entries) {
-    if (e.isIntersecting) e.target.classList.add("is-visible");
-  }
-}, { threshold: 0.12 });
-revealEls.forEach(el => io.observe(el));
-
 // Subtle tilt on phone (mouse move)
 const phone = document.getElementById("phoneStack");
 let raf = null;
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 function clamp(v, min, max){ return Math.max(min, Math.min(max, v)); }
 
@@ -37,12 +29,12 @@ function onLeave(){
   phone.style.transform = "";
 }
 
-if (phone && window.matchMedia("(pointer:fine)").matches) {
+if (phone && !prefersReducedMotion && window.matchMedia("(pointer:fine)").matches) {
   window.addEventListener("mousemove", onMove, { passive: true });
   window.addEventListener("mouseleave", onLeave, { passive: true });
 }
 
-// ===== Monthly views counter (starts at 25,000,000 and counts up) =====
+// ===== Monthly views counter =====
 const counterEl = document.getElementById("viewsCounter");
 
 function formatNumber(n){
@@ -50,7 +42,7 @@ function formatNumber(n){
 }
 
 if (counterEl) {
-  const start = Number(counterEl.dataset.start || "95686340");
+  const start = Number(counterEl.dataset.start || "45000000");
 
   // choose a believable rate: ~ +60 to +140 per second, with tiny variation
   let baseRate = 500; // per second
@@ -58,6 +50,12 @@ if (counterEl) {
   let last = performance.now();
 
   function tick(now){
+    if (document.hidden) {
+      last = now;
+      requestAnimationFrame(tick);
+      return;
+    }
+
     const dt = (now - last) / 1000;
     last = now;
 

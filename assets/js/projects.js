@@ -1,12 +1,3 @@
-// Reveal animations
-const revealEls = Array.from(document.querySelectorAll(".reveal"));
-const io = new IntersectionObserver((entries) => {
-  for (const e of entries) {
-    if (e.isIntersecting) e.target.classList.add("is-visible");
-  }
-}, { threshold: 0.12 });
-revealEls.forEach(el => io.observe(el));
-
 // Filtering
 const chips = Array.from(document.querySelectorAll(".chip"));
 const cards = Array.from(document.querySelectorAll(".pr-card"));
@@ -19,7 +10,7 @@ function applyFilter(tag){
   cards.forEach(card => {
     const tags = (card.dataset.tags || "").split(/\s+/).filter(Boolean);
     const show = (tag === "all") || tags.includes(tag);
-    card.style.display = show ? "" : "none";
+    card.hidden = !show;
   });
 }
 

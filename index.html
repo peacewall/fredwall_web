@@ -3,50 +3,239 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fredwall</title>
+  <title>Fredwalls · Håvard Fredwall</title>
+  <meta
+    name="description"
+    content="Håvard Fredwall: professional beach volleyball player, electrical engineer and creator of the volleyball sketches at @_fredwalls. Brand partnerships and engineering: h@fredwalls.no"
+  />
+  <link rel="canonical" href="https://fredwalls.no/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Fredwalls · Håvard Fredwall" />
+  <meta property="og:description" content="Volleyball sketches with a real athlete behind them. Beach volleyball pro, electrical engineer, Oslo." />
+  <meta property="og:image" content="https://fredwalls.no/assets/img/home/vb-block.webp" />
+  <meta property="og:url" content="https://fredwalls.no/" />
+  <meta name="theme-color" content="#0b0c10" />
 
   <link rel="stylesheet" href="/assets/css/home.css" />
+  <link rel="stylesheet" href="/assets/css/landing.css" />
 </head>
 
-<body>
-  <!-- NAV -->
+<body class="home-page landing">
   <header class="nav-wrap">
     <nav class="nav" aria-label="Primary">
       <div class="nav__links">
-        <a class="active" href="/">Home</a>
-        <a href="/pages/work-education.html">Work &amp; Education</a>
-        <a class="active" href="/pages/projects.html">Projects</a>
+        <a href="/">Home</a>
+        <a href="#watch">Watch</a>
+        <a href="#brands">Brands</a>
+        <a href="#engineering">Engineering</a>
         <a href="/pages/volleyball.html">Volleyball</a>
-        <a href="/pages/content.html">Content</a>
-        <a href="/pages/contact.html">Contact</a>
+        <a href="#contact">Contact</a>
       </div>
     </nav>
   </header>
 
-  <!-- HOME -->
-  <main class="home">
-    <!-- Fullscreen background video -->
-    <video class="home__bg" autoplay muted loop playsinline aria-hidden="true">
-      <source src="/assets/video/bg.mp4" type="video/mp4" />
-    </video>
-    <div class="home__overlay" aria-hidden="true"></div>
+  <!-- Fixed background: the star video, a dark veil, and the volleyball that flies as you scroll -->
+  <video class="home__bg" autoplay muted loop playsinline preload="metadata" data-bg-video aria-hidden="true">
+    <source src="/assets/video/bg.mp4" type="video/mp4" />
+  </video>
+  <div class="home__overlay" aria-hidden="true"></div>
+  <div class="ballLayer" aria-hidden="true">
+    <svg class="ball" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+      <circle cx="50" cy="50" r="46" />
+      <g id="ballSeg">
+        <path d="M50 50C47 35 52 18 66 7" />
+        <path d="M34 42C33 28 39 14 51 4.5" />
+        <path d="M19.5 37C20 26 26 16 36 9.5" />
+      </g>
+      <use href="#ballSeg" transform="rotate(120 50 50)" />
+      <use href="#ballSeg" transform="rotate(240 50 50)" />
+    </svg>
+  </div>
 
-    <!-- Center content -->
-    <section class="home__center">
-      <div class="home__portraitWrap">
-        <!-- Use the profile image you want here -->
-        <img class="home__portrait" src="/assets/img/profile/art-profile.png" alt="Håvard Fredwall">
+  <main class="home">
+    <!-- HERO -->
+    <section class="home__center" id="top" aria-label="Introduction">
+      <div class="home__eyebrow reveal">Beach volleyball pro · Engineer · Creator</div>
+
+      <div class="home__portraitWrap reveal">
+        <img class="home__portrait" src="/assets/img/home/portrait.webp" alt="Håvard Fredwall" fetchpriority="high" decoding="async" />
       </div>
 
-      <h1 class="home__title">Håvard Fredwall</h1>
+      <h1 class="home__title reveal">Håvard Fredwall</h1>
+      <p class="home__subtitle reveal">Volleyball sketches. Something stupid, done seriously.</p>
 
-      <p class="home__subtitle">
-        Electrical &amp; Embedded Software Engineer · Professional Beach Volleyball Player · Content Creator
-      </p>
+      <div class="hero__actions reveal">
+        <a class="lbtn lbtn--primary" href="https://www.instagram.com/_fredwalls" target="_blank" rel="noopener">Instagram</a>
+        <a class="lbtn" href="https://www.tiktok.com/@_fredwalls" target="_blank" rel="noopener">TikTok</a>
+        <a class="lbtn" href="mailto:h@fredwalls.no">h@fredwalls.no</a>
+      </div>
 
-      <div class="home__links" aria-label="Social links">
-        <a class="home__iconLink" href="https://www.instagram.com/sunsetspikes/" target="_blank" rel="noreferrer" aria-label="Instagram (SunsetSpikes)">
-          <img src="/assets/img/icons/instagram.png" alt="">
+      <ul class="lstats glass reveal" aria-label="Audience numbers">
+        <li><strong data-stat="total_followers">87.4k</strong><span>followers</span></li>
+        <li><strong data-stat="instagram.followers">56.8k</strong><span>Instagram</span></li>
+        <li><strong data-stat="tiktok.followers">30.6k</strong><span>TikTok</span></li>
+        <li><strong data-stat="instagram.views_30d">381M</strong><span>views, last 30 days</span></li>
+      </ul>
+      <p class="lstats__note reveal">Updated <span data-stat-date>15 Nov 2026</span></p>
+    </section>
+
+    <!-- WATCH -->
+    <section class="lsec" id="watch">
+      <header class="lsec__head reveal">
+        <h2>Watch</h2>
+      </header>
+      <div class="watch">
+        <figure class="watch__item reveal">
+          <figcaption><strong data-stat="featured.0.views">229M</strong> views</figcaption>
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DfptP87R020/" data-instgrm-version="14">
+            <a href="https://www.instagram.com/reel/DfptP87R020/" target="_blank" rel="noopener">Watch on Instagram</a>
+          </blockquote>
+        </figure>
+        <figure class="watch__item reveal">
+          <figcaption><strong data-stat="featured.1.views">39.4M</strong> views</figcaption>
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DfjaiotAX02/" data-instgrm-version="14">
+            <a href="https://www.instagram.com/reel/DfjaiotAX02/" target="_blank" rel="noopener">Watch on Instagram</a>
+          </blockquote>
+        </figure>
+        <figure class="watch__item reveal">
+          <figcaption><strong data-stat="featured.2.views">20.6M</strong> views</figcaption>
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DNxpLTe2JX7/" data-instgrm-version="14">
+            <a href="https://www.instagram.com/reel/DNxpLTe2JX7/" target="_blank" rel="noopener">Watch on Instagram</a>
+          </blockquote>
+        </figure>
+      </div>
+      <div class="lsec__actions reveal">
+        <a class="lbtn lbtn--primary" href="https://www.instagram.com/_fredwalls" target="_blank" rel="noopener">More on Instagram</a>
+        <a class="lbtn" href="https://www.tiktok.com/@_fredwalls" target="_blank" rel="noopener">More on TikTok</a>
+      </div>
+    </section>
+
+    <!-- PHOTO STRIP -->
+    <section class="strip" aria-label="Beach volleyball photos">
+      <div class="strip__track">
+        <img src="/assets/img/home/vb-block.webp" alt="Block at the net" loading="lazy" />
+        <img src="/assets/img/home/vb-sunset.webp" alt="Centre court at sunset" loading="lazy" />
+        <img src="/assets/img/home/vb-jump.webp" alt="Jump set on the beach" loading="lazy" />
+        <img src="/assets/img/home/vb-duel.webp" alt="Duel at the net" loading="lazy" />
+        <img src="/assets/img/home/vb-match.webp" alt="Tournament match" loading="lazy" />
+        <img src="/assets/img/home/vb-net.webp" alt="Attack at the net" loading="lazy" />
+        <img src="/assets/img/home/vb-dig.webp" alt="Dig in the sand" loading="lazy" />
+        <!-- repeated once so the strip loops without a seam -->
+        <img src="/assets/img/home/vb-block.webp" alt="" aria-hidden="true" loading="lazy" />
+        <img src="/assets/img/home/vb-sunset.webp" alt="" aria-hidden="true" loading="lazy" />
+        <img src="/assets/img/home/vb-jump.webp" alt="" aria-hidden="true" loading="lazy" />
+        <img src="/assets/img/home/vb-duel.webp" alt="" aria-hidden="true" loading="lazy" />
+        <img src="/assets/img/home/vb-match.webp" alt="" aria-hidden="true" loading="lazy" />
+        <img src="/assets/img/home/vb-net.webp" alt="" aria-hidden="true" loading="lazy" />
+        <img src="/assets/img/home/vb-dig.webp" alt="" aria-hidden="true" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- BRANDS -->
+    <section class="lsec" id="brands">
+      <header class="lsec__head reveal">
+        <h2>For brands</h2>
+        <p>Your product inside the joke.</p>
+      </header>
+
+      <ul class="proof reveal" aria-label="Reach">
+        <li><strong data-stat="instagram.views_30d">381M</strong><span>views in 30 days</span></li>
+        <li><strong data-stat="total_followers">87.4k</strong><span>followers</span></li>
+        <li><strong data-stat="featured.0.views">229M</strong><span>on one reel</span></li>
+      </ul>
+
+      <div class="tiles tiles--3">
+        <article class="tile tile--tall tile--sunset reveal">
+          <img class="tile__cut" src="/assets/img/home/jersey.webp" alt="" loading="lazy" />
+          <div class="tile__label"><h3>In a sketch</h3></div>
+        </article>
+        <article class="tile tile--tall reveal">
+          <img src="/assets/img/home/vb-jump.webp" alt="" loading="lazy" />
+          <div class="tile__label"><h3>A series on your gear</h3></div>
+        </article>
+        <article class="tile tile--tall reveal">
+          <img src="/assets/img/home/p-gaitline.webp" alt="" loading="lazy" />
+          <div class="tile__label"><h3>Built on camera</h3></div>
+        </article>
+      </div>
+
+      <div class="lsec__actions reveal">
+        <a class="lbtn lbtn--primary lbtn--big" href="mailto:h@fredwalls.no?subject=Partnership">h@fredwalls.no</a>
+        <span class="lsec__hint">Media kit on request</span>
+      </div>
+    </section>
+
+    <!-- ENGINEERING -->
+    <section class="lsec" id="engineering">
+      <header class="lsec__head reveal">
+        <h2>Engineering</h2>
+        <p>Electronics · Embedded software · 3D</p>
+      </header>
+
+      <div class="tiles tiles--6">
+        <a class="tile reveal" href="/pages/projects.html">
+          <img src="/assets/img/home/p-pcb.webp" alt="" loading="lazy" />
+          <div class="tile__label"><h3>PCB design</h3><span>ARC142</span></div>
         </a>
+        <a class="tile reveal" href="/pages/projects.html">
+          <img src="/assets/img/home/p-fph462.webp" alt="" loading="lazy" />
+          <div class="tile__label"><h3>System and 3D</h3><span>FPH462 at Voltina</span></div>
+        </a>
+        <a class="tile reveal" href="/pages/projects.html">
+          <img src="/assets/img/home/p-painsensor.webp" alt="" loading="lazy" />
+          <div class="tile__label"><h3>Medical hardware</h3><span>PainSensor, MedStorm</span></div>
+        </a>
+        <a class="tile reveal" href="/pages/projects.html">
+          <img src="/assets/img/home/p-trimaran.webp" alt="" loading="lazy" />
+          <div class="tile__label"><h3>Autonomous trimaran</h3><span>Bachelor project</span></div>
+        </a>
+        <a class="tile reveal" href="/pages/projects.html">
+          <img src="/assets/img/home/p-smartwatch.webp" alt="" loading="lazy" />
+          <div class="tile__label"><h3>Smartwatch</h3><span>Prototype</span></div>
+        </a>
+        <a class="tile reveal" href="/pages/projects.html">
+          <img src="/assets/img/home/p-energy.webp" alt="" loading="lazy" />
+          <div class="tile__label"><h3>Energy harvesting</h3><span>Circuit design</span></div>
+        </a>
+      </div>
 
-        <a class="home__iconLink" href="https://www.linkedin.com/in/h%C3%A5var
+      <div class="lsec__actions reveal">
+        <a class="lbtn lbtn--primary" href="/pages/projects.html">All projects</a>
+        <a class="lbtn" href="/pages/work-education.html">Work and education</a>
+        <a class="lbtn" href="/assets/docs/CV_Havard_Fredwall.pdf" target="_blank" rel="noopener">CV</a>
+        <a class="lbtn" href="https://github.com/peacewall" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="lsec" id="contact">
+      <div class="contactCard glass reveal">
+        <img class="contactCard__img" src="/assets/img/home/desk.webp" alt="Håvard Fredwall at a desk" loading="lazy" />
+        <div class="contactCard__body">
+          <h2>Contact</h2>
+          <a class="contactCard__mail" href="mailto:h@fredwalls.no">h@fredwalls.no</a>
+          <div class="lsec__actions lsec__actions--left">
+            <a class="lbtn" href="https://www.instagram.com/_fredwalls" target="_blank" rel="noopener">Instagram</a>
+            <a class="lbtn" href="https://www.tiktok.com/@_fredwalls" target="_blank" rel="noopener">TikTok</a>
+            <a class="lbtn" href="https://www.linkedin.com/in/h%C3%A5vard-fredwall-548137234/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+          <form class="lform" action="https://formspree.io/f/mpqaypkz" method="POST">
+            <input type="text" name="name" placeholder="Name" aria-label="Name" required autocomplete="name" />
+            <input type="email" name="email" placeholder="Email" aria-label="Email" required autocomplete="email" />
+            <textarea name="message" rows="3" placeholder="Message" aria-label="Message" required></textarea>
+            <button class="lbtn lbtn--primary" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="lfoot">
+      <p>Fredwalls · Håvard Fredwall · Oslo, Norway</p>
+    </footer>
+  </main>
+
+  <script defer src="/assets/js/site.js"></script>
+  <script defer src="/assets/js/landing.js"></script>
+  <script async src="https://www.instagram.com/embed.js"></script>
+</body>
+</html>

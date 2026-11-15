@@ -1,0 +1,39 @@
+{
+  "updated": "2026-11-15",
+  "instagram": {
+    "handle": "_fredwalls",
+    "followers": 56897,
+    "posts": 231,
+    "views_30d": 381915673,
+    "views_90d": 396340469
+  },
+  "tiktok": {
+    "handle": "_fredwalls",
+    "followers": 30600,
+    "as_of": "2026-11-15"
+  },
+  "total_followers": 87497,
+  "featured": [
+    {
+      "code": "DfptP87R020",
+      "permalink": "https://www.instagram.com/reel/DfptP87R020/",
+      "views": 229000000,
+      "as_of": "2026-11-15",
+      "source": "profile"
+    },
+    {
+      "code": "DfjaiotAX02",
+      "permalink": "https://www.instagram.com/reel/DfjaiotAX02/",
+      "views": 39433099,
+      "as_of": "2026-11-15",
+      "source": "api"
+    },
+    {
+      "code": "DNxpLTe2JX7",
+      "permalink": "https://www.instagram.com/reel/DNxpLTe2JX7/",
+      "views": 20610482,
+      "as_of": "2026-11-15",
+      "source": "api"
+    }
+  ]
+}

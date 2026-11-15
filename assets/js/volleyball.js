@@ -1,26 +1,31 @@
-// Reveal-on-scroll
-const revealEls = Array.from(document.querySelectorAll(".reveal"));
-const io = new IntersectionObserver((entries) => {
-  for (const e of entries) {
-    if (e.isIntersecting) e.target.classList.add("is-visible");
-  }
-}, { threshold: 0.12 });
-revealEls.forEach(el => io.observe(el));
+const heroFeature = document.querySelector(".vb-hero__feature");
+const silhouette = document.querySelector(".vb-hero__silhouette");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-// Subtle parallax for hero side images
-const left = document.querySelector(".vb-hero__person--left");
-const right = document.querySelector(".vb-hero__person--right");
+if (!prefersReducedMotion && (heroFeature || silhouette)) {
+  let ticking = false;
 
-function parallax(){
-  const y = window.scrollY || 0;
-  const t = Math.min(y / 6, 120);
+  const parallax = () => {
+    const y = window.scrollY || 0;
+    const featureShift = Math.min(y * 0.08, 20);
+    const silhouetteShift = Math.min(y * 0.14, 42);
 
-  if (left) left.style.transform = `translate3d(0, ${t * 0.35}px, 0)`;
-  if (right) right.style.transform = `translate3d(0, ${t * 0.25}px, 0)`;
+    if (heroFeature) {
+      heroFeature.style.setProperty("--vb-feature-shift", `${featureShift}px`);
+    }
+
+    if (silhouette) {
+      silhouette.style.setProperty("--vb-silhouette-shift", `${silhouetteShift}px`);
+    }
+
+    ticking = false;
+  };
+
+  window.addEventListener("scroll", () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(parallax);
+  }, { passive: true });
+
+  parallax();
 }
-
-window.addEventListener("scroll", () => {
-  requestAnimationFrame(parallax);
-}, { passive: true });
-
-parallax();

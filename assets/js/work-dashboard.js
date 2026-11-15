@@ -1,4 +1,4 @@
-// Sidebar toggle on mobile + reveal animations + ring progress animation
+// Sidebar toggle on mobile + ring progress animation
 
 const burger = document.getElementById("burger");
 const sidebar = document.getElementById("sidebar");
@@ -21,21 +21,28 @@ if (burger && sidebar) {
   });
 }
 
-// Reveal cards on scroll
-const revealEls = Array.from(document.querySelectorAll(".reveal"));
-const revealIO = new IntersectionObserver((entries) => {
-  for (const e of entries) {
-    if (e.isIntersecting) e.target.classList.add("is-visible");
-  }
-}, { threshold: 0.15 });
-
-revealEls.forEach(el => revealIO.observe(el));
-
-// Animate ring progress
 const rings = Array.from(document.querySelectorAll(".ring"));
-for (const ring of rings) {
-  const pct = Number(ring.getAttribute("data-pct") || 0);
-  const fg = ring.querySelector(".ring__fg");
-  // Circumference mapping in SVG units (100 is convenient for dasharray here)
-  if (fg) fg.style.strokeDasharray = `${Math.max(0, Math.min(100, pct))} 100`;
+const drawRings = () => {
+  for (const ring of rings) {
+    const pct = Number(ring.getAttribute("data-pct") || 0);
+    const fg = ring.querySelector(".ring__fg");
+    if (fg) fg.style.strokeDasharray = `${Math.max(0, Math.min(100, pct))} 100`;
+  }
+};
+
+if (!rings.length) {
+  // Nothing to animate.
+} else if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
+  drawRings();
+} else {
+  const ringSection = rings[0].closest(".sidebar__section") || rings[0];
+  const ringObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      drawRings();
+      observer.disconnect();
+    });
+  }, { threshold: 0.35 });
+
+  ringObserver.observe(ringSection);
 }

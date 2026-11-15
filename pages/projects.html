@@ -19,14 +19,14 @@
         <a href="/pages/work-education.html">Work &amp; Education</a>
         <a class="active" href="/pages/projects.html">Projects</a>
         <a href="/pages/volleyball.html">Volleyball</a>
-        <a href="/pages/content.html">Content</a>
+        <a href="/#brands">Brands</a>
         <a href="/pages/contact.html">Contact</a>
       </div>
     </nav>
   </header>
 
   <!-- Fullscreen video background -->
-  <video class="projects__bg" autoplay muted loop playsinline preload="metadata">
+  <video class="projects__bg" autoplay muted loop playsinline preload="metadata" data-bg-video>
     <!-- IMPORTANT: adjust path if your bg.mp4 lives somewhere else -->
     <source src="/assets/video/bg.mp4" type="video/mp4" />
   </video>
@@ -93,7 +93,7 @@
       <article class="pr-card reveal" data-tags="mech military"
         data-title="ARC142 PCB design"
         data-subtitle="PCB design"
-        data-body="PCB design for the Adaptable Reprogrammable Cable 142. The design is optimized for minimum size while still delivering strong performance. Built around a BGA STM32 MCU and comunicates over RS485 and a half duplex UART."
+        data-body="PCB design for the Adaptable Reprogrammable Cable 142. The design is optimized for minimum size while still delivering strong performance. Built around a BGA STM32 MCU and communicating over RS485 and half-duplex UART."
         data-img="/assets/img/projects/smartcable_pcb.png">
         <div class="pr-card__img" style="--img:url('/assets/img/projects/smartcable_pcb.png')"></div>
         <div class="pr-card__shade" aria-hidden="true"></div>
@@ -136,7 +136,7 @@
         <div class="pr-card__content">
           <div class="pr-card__kicker"> MedStorm</div>
           <h3 class="pr-card__h">PainSensor (MedStorm)</h3>
-          <p class="pr-card__p">Designed serveral products for the medical marked</p>
+          <p class="pr-card__p">Designed several products for the medical market.</p>
           <div class="pr-card__more">Click to read more</div>
           <div class="pr-card__tags">
             <span class="tag">Hardware</span><span class="tag">Biomedical</span>
@@ -202,7 +202,7 @@
         data-title="Energy harvesting circuit"
         data-subtitle="Wave energy conversion unit"
         data-body="Energy-harvesting circuit for a wave energy conversion unit, including rectification, power management, regulation, and system interfacing."
-        data-img="/assets/img/projects/eenergyharvesting.png">
+        data-img="/assets/img/projects/energyharvesting.png">
         <div class="pr-card__img" style="--img:url('/assets/img/projects/energyharvesting.png')"></div>
         <div class="pr-card__shade" aria-hidden="true"></div>
         <div class="pr-card__content">
@@ -218,8 +218,8 @@
 
  <article class="pr-card reveal" data-tags="hardware "
         data-title="Analog CMOS Temperatur circuit"
-        data-subtitle="Impedance matching + filtering + temperature independace"
-        data-body="I designed a temperatuer circuit in analog cmos making all opamps, temperature indementeant and generatinc rciuti alsweel as a logic block and layout of the sensor to make a small tapeout."
+        data-subtitle="Impedance matching + filtering + temperature independence"
+        data-body="I designed an analog CMOS temperature sensor, including the op-amps, temperature-independent biasing circuitry, digital logic, and layout for a compact tapeout."
         data-img="/assets/img/projects/temp_sens.png">
         <div class="pr-card__img" style="--img:url('/assets/img/projects/temp_sens.png')"></div>
         <div class="pr-card__shade" aria-hidden="true"></div>
@@ -237,14 +237,14 @@
       <article class="pr-card reveal" data-tags="hardware "
         data-title="Analog CMOS PPG circuit"
         data-subtitle="Impedance matching + filtering"
-        data-body="I designed a PPG/pulse and oxigen level sensor from scratchu using ANALOG CMOS. I haev build PPG sensors befire by using OPAMPS etc, but this time allt eh opamps, transconducatnce amplefiers and filders where made complelty from scracth"
+        data-body="I designed a PPG and oxygen-level sensing circuit from scratch in analog CMOS. I had built PPG sensors before using discrete op-amps and supporting circuitry, but this time the op-amps, transconductance amplifiers, and filters were all designed from the transistor level."
         data-img="/assets/img/projects/cmos_ppg.png">
         <div class="pr-card__img" style="--img:url('/assets/img/projects/cmos_ppg.png')"></div>
         <div class="pr-card__shade" aria-hidden="true"></div>
         <div class="pr-card__content">
           <div class="pr-card__kicker">Analog CMOS</div>
           <h3 class="pr-card__h">CMOS PPG</h3>
-          <p class="pr-card__p">Potoplets myegrafi sensor from alalog CMOS</p>
+          <p class="pr-card__p">Photoplethysmography sensor built in analog CMOS.</p>
           <div class="pr-card__more">Click to read more</div>
           <div class="pr-card__tags">
             <span class="tag">Biomedical</span><span class="tag">Hardware</span>
@@ -309,8 +309,8 @@
       <article class="pr-card reveal" data-tags="biomed hardware"
         data-title="Biomedical pneumatic sensory board"
         data-subtitle="Balance study · pressure/oxygen measurement"
-        data-body="Pneumatic measurement platform for balance studies. Uses controlled tilting and shifting under load to measure oxygen levels in the foot. Developed collaboratively with a fellow student and an Gaitline, Norways largest shoue manefacturer."
-        data-img="/assets/img/projects/gaitling">
+        data-body="Pneumatic measurement platform for balance studies. Uses controlled tilting and shifting under load to measure oxygen levels in the foot. Developed together with a fellow student and Gaitline, Norway's largest shoe manufacturer."
+        data-img="/assets/img/projects/gaitline.png">
         <div class="pr-card__img" style="--img:url('/assets/img/projects/gaitline.png')"></div>
         <div class="pr-card__shade" aria-hidden="true"></div>
         <div class="pr-card__content">
@@ -366,6 +366,7 @@
     </div>
   </div>
 
-  <script src="/assets/js/projects.js"></script>
+  <script defer src="/assets/js/site.js"></script>
+  <script defer src="/assets/js/projects.js"></script>
 </body>
 </html>
