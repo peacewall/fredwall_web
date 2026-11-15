@@ -14,7 +14,8 @@
     if (!href) return;
 
     const url = new URL(href, window.location.origin);
-    const isActive = !url.hash && normalizePath(url.pathname) === currentPath;
+    const also = link.dataset.also ? normalizePath(link.dataset.also) : null;
+    const isActive = !url.hash && (normalizePath(url.pathname) === currentPath || also === currentPath);
 
     link.classList.toggle("active", isActive);
 

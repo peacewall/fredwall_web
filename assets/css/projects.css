@@ -391,3 +391,7 @@ body.projects .nav-wrap{
     transition: none !important;
   }
 }
+
+.projects__back{ margin: 0 0 .4rem; }
+.projects__back a{ color: rgba(255,255,255,.7); font-weight: 600; }
+.projects__back a:hover{ color: #fff; }

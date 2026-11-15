@@ -109,6 +109,27 @@ body.landing{ overflow-x: hidden; }
 .watch__item blockquote a{ text-decoration: underline; text-underline-offset: 3px; color: var(--muted); }
 .watch__item .instagram-media{ min-width: 0 !important; width: 100% !important; max-width: 400px !important; margin: 0 !important; border-radius: 16px !important; }
 
+/* Reels: the video itself, silent, in a phone-shaped frame */
+.reels{
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem;
+  max-width: 860px; margin: 0 auto;
+}
+.reel{
+  position: relative; display: block; aspect-ratio: 9 / 16; overflow: hidden;
+  border-radius: 22px; border: 1px solid var(--line); background: #14161c;
+  box-shadow: 0 14px 40px rgba(0,0,0,.35);
+  transition: transform .3s ease, border-color .3s ease;
+}
+.reel:hover{ transform: translateY(-4px); border-color: rgba(255,255,255,.28); }
+.reel video{ position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.reel__views{
+  position: absolute; left: .7rem; bottom: .7rem;
+  padding: .28rem .7rem; border-radius: 999px;
+  background: rgba(8,9,12,.6); color: rgba(255,255,255,.82); font-size: .84rem;
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+.reel__views strong{ color: #fff; font-size: .98rem; }
+
 /* Photo strip */
 .strip{
   position: relative; z-index: 2; overflow: hidden; padding: .5rem 0;
@@ -179,6 +200,7 @@ body.landing{ overflow-x: hidden; }
 }
 .lform input:focus, .lform textarea:focus{ outline: none; border-color: var(--cyan); }
 .lform button{ justify-self: start; }
+.lform__status{ grid-column: 1 / -1; margin: 0; min-height: 1.2em; color: var(--muted); font-size: .92rem; }
 
 .lfoot{
   position: relative; z-index: 2; text-align: center;
@@ -187,9 +209,15 @@ body.landing{ overflow-x: hidden; }
 .lfoot p{ margin: 0; }
 
 /* ===== Small screens ===== */
-@media (max-width: 900px){
-  .watch{ grid-template-columns: 1fr; }
-  .watch__item blockquote{ max-width: 400px; }
+@media (max-width: 700px){
+  /* phones: swipe sideways through the reels instead of three tall ones stacked */
+  .reels{
+    display: flex; gap: .8rem; overflow-x: auto; scroll-snap-type: x mandatory;
+    margin: 0 calc(-1 * var(--gutter)); padding: 0 var(--gutter) .5rem;
+    -webkit-overflow-scrolling: touch; scrollbar-width: none;
+  }
+  .reels::-webkit-scrollbar{ display: none; }
+  .reel{ flex: 0 0 64%; scroll-snap-align: center; }
 }
 @media (max-width: 700px){
   .lstats{ grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem .8rem; }

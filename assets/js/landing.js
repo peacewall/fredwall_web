@@ -45,6 +45,31 @@
     })
     .catch(() => { /* the numbers written into the page stay */ });
 
+  // ---- contact form: send without leaving the page -------------------------
+  const form = document.getElementById("contactForm");
+  const formStatus = document.getElementById("contactStatus");
+  if (form && formStatus) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      formStatus.textContent = "Sending...";
+      try {
+        const res = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" },
+        });
+        if (res.ok) {
+          form.reset();
+          formStatus.textContent = "Sent. I will get back to you soon.";
+        } else {
+          formStatus.textContent = "That did not go through. Please email me instead.";
+        }
+      } catch {
+        formStatus.textContent = "No connection. Please email me instead.";
+      }
+    });
+  }
+
   // ---- volleyball ----------------------------------------------------------
   // One pass over the screen per screen-height of scrolling, left to right, then back,
   // on an arc like a ball going over a net. Position depends only on scroll: it stops when you stop.

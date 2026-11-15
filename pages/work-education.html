@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Work & Education · Fredwall</title>
+  <title>Engineering · Fredwalls</title>
 
   <!-- Keep your existing nav styling -->
   <link rel="stylesheet" href="/assets/css/home.css" />
@@ -19,11 +19,9 @@
 
       <div class="nav__links">
         <a href="/">Home</a>
-        <a href="/pages/work-education.html">Work &amp; Education</a>
-        <a href="/pages/projects.html">Projects</a>
+        <a href="/pages/work-education.html" data-also="/pages/projects.html">Engineering</a>
         <a href="/pages/volleyball.html">Volleyball</a>
-        <a href="/#brands">Brands</a>
-        <a href="/pages/contact.html">Contact</a>
+        <a href="/#contact">Contact</a>
       </div>
     </nav>
   </header>
@@ -150,7 +148,7 @@
         <div class="hero__overlay" aria-hidden="true"></div>
 
         <div class="hero__content">
-          <h1 class="hero__title">Work &amp; Education</h1>
+          <h1 class="hero__title">Engineering</h1>
           <p class="hero__sub">
             I build embedded systems end-to-end: electronics, firmware, system design, 3D modeling, UI, and product design.
           </p>
@@ -305,6 +303,40 @@
             </p>
           </article>
         </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="section" id="projects">
+        <div class="section__title">Projects</div>
+
+        <div class="eng-tiles">
+          <a class="eng-tile reveal" href="/pages/projects.html">
+            <img src="/assets/img/home/p-pcb.webp" alt="" loading="lazy" decoding="async">
+            <span class="eng-tile__label"><b>PCB design</b><i>ARC142</i></span>
+          </a>
+          <a class="eng-tile reveal" href="/pages/projects.html">
+            <img src="/assets/img/home/p-fph462.webp" alt="" loading="lazy" decoding="async">
+            <span class="eng-tile__label"><b>System and 3D</b><i>FPH462 at Voltina</i></span>
+          </a>
+          <a class="eng-tile reveal" href="/pages/projects.html">
+            <img src="/assets/img/home/p-painsensor.webp" alt="" loading="lazy" decoding="async">
+            <span class="eng-tile__label"><b>Medical hardware</b><i>PainSensor, MedStorm</i></span>
+          </a>
+          <a class="eng-tile reveal" href="/pages/projects.html">
+            <img src="/assets/img/home/p-trimaran.webp" alt="" loading="lazy" decoding="async">
+            <span class="eng-tile__label"><b>Autonomous trimaran</b><i>Bachelor project</i></span>
+          </a>
+          <a class="eng-tile reveal" href="/pages/projects.html">
+            <img src="/assets/img/home/p-smartwatch.webp" alt="" loading="lazy" decoding="async">
+            <span class="eng-tile__label"><b>Smartwatch</b><i>Prototype</i></span>
+          </a>
+          <a class="eng-tile reveal" href="/pages/projects.html">
+            <img src="/assets/img/home/p-energy.webp" alt="" loading="lazy" decoding="async">
+            <span class="eng-tile__label"><b>Energy harvesting</b><i>Circuit design</i></span>
+          </a>
+        </div>
+
+        <p class="eng-more"><a class="btn" href="/pages/projects.html">All projects</a></p>
       </section>
 
       <!-- EDUCATION -->
